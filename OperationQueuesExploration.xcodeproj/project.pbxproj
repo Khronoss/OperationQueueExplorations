@@ -12,6 +12,8 @@
 		87325BBB1FAB758E00F2CF15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87325BBA1FAB758E00F2CF15 /* Assets.xcassets */; };
 		87325BBE1FAB758E00F2CF15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87325BBC1FAB758E00F2CF15 /* LaunchScreen.storyboard */; };
 		87325BC91FAB782500F2CF15 /* BlockOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87325BC81FAB782500F2CF15 /* BlockOperationViewController.swift */; };
+		87EBF3061FACAF5A00DDA9EB /* OperationSubclassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EBF3051FACAF5A00DDA9EB /* OperationSubclassViewController.swift */; };
+		87EBF3081FACC1BB00DDA9EB /* OQEOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EBF3071FACC1BB00DDA9EB /* OQEOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		87325BBD1FAB758E00F2CF15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87325BBF1FAB758E00F2CF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87325BC81FAB782500F2CF15 /* BlockOperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockOperationViewController.swift; sourceTree = "<group>"; };
+		87EBF3051FACAF5A00DDA9EB /* OperationSubclassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationSubclassViewController.swift; sourceTree = "<group>"; };
+		87EBF3071FACC1BB00DDA9EB /* OQEOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQEOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		87325BC51FAB76C100F2CF15 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				87EBF3041FACAE8A00DDA9EB /* OperationSubclass */,
 				87325BC71FAB780B00F2CF15 /* BlockOperation */,
 				87325BC61FAB77FC00F2CF15 /* AppDelegate */,
 			);
@@ -86,6 +91,15 @@
 				87325BC81FAB782500F2CF15 /* BlockOperationViewController.swift */,
 			);
 			path = BlockOperation;
+			sourceTree = "<group>";
+		};
+		87EBF3041FACAE8A00DDA9EB /* OperationSubclass */ = {
+			isa = PBXGroup;
+			children = (
+				87EBF3051FACAF5A00DDA9EB /* OperationSubclassViewController.swift */,
+				87EBF3071FACC1BB00DDA9EB /* OQEOperation.swift */,
+			);
+			path = OperationSubclass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +176,8 @@
 			files = (
 				87325BC91FAB782500F2CF15 /* BlockOperationViewController.swift in Sources */,
 				87325BB41FAB758E00F2CF15 /* AppDelegate.swift in Sources */,
+				87EBF3061FACAF5A00DDA9EB /* OperationSubclassViewController.swift in Sources */,
+				87EBF3081FACC1BB00DDA9EB /* OQEOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
