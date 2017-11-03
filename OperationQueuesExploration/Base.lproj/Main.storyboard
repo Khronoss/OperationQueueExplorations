@@ -56,6 +56,21 @@
             </objects>
             <point key="canvasLocation" x="1362" y="134"/>
         </scene>
+        <!--Subclassing Operation-->
+        <scene sceneID="EWw-jO-J48">
+            <objects>
+                <viewController title="Subclassing Operation" id="JZx-Fb-GEc" customClass="OperationSubclassViewController" customModule="OperationQueuesExploration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vcu-Oi-ZGx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="3Rc-Fo-fmW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiP-Sz-Ba3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="879"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fuk-NE-pvP">
             <objects>
@@ -119,6 +134,42 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Ufg-18-DEP" kind="show" id="r1a-Ev-I9C"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="UaC-ri-o0F">
+                                        <rect key="frame" x="0.0" y="80" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UaC-ri-o0F" id="Ows-A1-g57">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="h1e-eZ-V5x">
+                                                    <rect key="frame" x="8" y="8" width="359" height="83.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Simple subclassing Operation object Example" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unS-1s-O93">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="41"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://agostini.tech/2017/07/30/understanding-operation-and-operationqueue-in-swift/" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KU-qN-aGr">
+                                                            <rect key="frame" x="0.0" y="47.5" width="359" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="0.0" green="0.46274510029999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="h1e-eZ-V5x" firstAttribute="leading" secondItem="Ows-A1-g57" secondAttribute="leading" constant="8" id="K0o-sn-TTg"/>
+                                                <constraint firstItem="h1e-eZ-V5x" firstAttribute="centerX" secondItem="Ows-A1-g57" secondAttribute="centerX" id="KUL-sC-YLH"/>
+                                                <constraint firstItem="h1e-eZ-V5x" firstAttribute="top" secondItem="Ows-A1-g57" secondAttribute="top" constant="8" id="eiL-LW-XBw"/>
+                                                <constraint firstItem="h1e-eZ-V5x" firstAttribute="centerY" secondItem="Ows-A1-g57" secondAttribute="centerY" id="sAh-WR-A0z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="JZx-Fb-GEc" kind="show" id="yq1-th-i90"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

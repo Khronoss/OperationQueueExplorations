@@ -17,6 +17,8 @@ class OperationSubclassViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         queue.qualityOfService = .default
+        
+        startOperations()
     }
 
     override func didReceiveMemoryWarning() {
