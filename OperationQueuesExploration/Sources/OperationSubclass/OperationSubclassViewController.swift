@@ -29,17 +29,17 @@ class OperationSubclassViewController: UIViewController {
     func startOperations() {
         let firstOP = OQEOperation(1_000_000)
         firstOP.completionBlock = {
-            print("firstOP finished")
+            print("firstOP finished, res: \(firstOP.result)")
         }
         
         let secondOP = OQEOperation(10_000_000)
         secondOP.completionBlock = {
-            print("secondOP finished")
+            print("secondOP finished, res: \(secondOP.result)")
         }
 
         let thirdOP = OQEOperation(100_000_000)
         thirdOP.completionBlock = {
-            print("thirdOP finished")
+            print("thirdOP finished, res: \(thirdOP.result)")
         }
         
         queue.addOperation(firstOP)

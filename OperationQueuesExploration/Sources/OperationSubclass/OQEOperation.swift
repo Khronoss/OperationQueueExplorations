@@ -12,6 +12,11 @@ class OQEOperation: Operation {
     var result = 0
     private var maxValue: Int
     
+    override func start() {
+        print("Start calculating for : \(maxValue)")
+        super.start()
+    }
+
     required init(_ maxValue: Int) {
         self.maxValue = maxValue
         
