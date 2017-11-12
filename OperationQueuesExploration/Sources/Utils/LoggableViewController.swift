@@ -20,6 +20,16 @@ class LoggableViewController: UIViewController {
 }
 
 extension LoggableViewController {
+	private var currentDateString: String {
+		let date = Date()
+		let formatter = DateFormatter()
+		
+		formatter.dateStyle = .short
+		formatter.timeStyle = .medium
+		
+		return formatter.string(from: date)
+	}
+
 	enum LogType {
 		case infos
 		case warning
@@ -50,7 +60,7 @@ extension LoggableViewController {
 			.foregroundColor: type.getColor()
 		]
 		
-		let attributedStr = NSMutableAttributedString(string: "\(message)\n", attributes: attributes)
+		let attributedStr = NSMutableAttributedString(string: "[\(currentDateString)]: \(message)\n", attributes: attributes)
 
 		DispatchQueue.main.sync { [weak self] in
 			let logText = self?.logTextView.attributedText.mutableCopy() as! NSMutableAttributedString

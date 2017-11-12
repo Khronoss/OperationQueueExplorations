@@ -15,6 +15,8 @@
 		87EBF3061FACAF5A00DDA9EB /* OperationSubclassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EBF3051FACAF5A00DDA9EB /* OperationSubclassViewController.swift */; };
 		87EBF3081FACC1BB00DDA9EB /* OQEOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EBF3071FACC1BB00DDA9EB /* OQEOperation.swift */; };
 		FA43CF171FB8E75400298D41 /* LoggableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43CF161FB8E75400298D41 /* LoggableViewController.swift */; };
+		FA43CF1A1FB8EEC500298D41 /* AsyncOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43CF191FB8EEC500298D41 /* AsyncOperationViewController.swift */; };
+		FA43CF1C1FB8EF7500298D41 /* TimerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43CF1B1FB8EF7500298D41 /* TimerOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		87EBF3051FACAF5A00DDA9EB /* OperationSubclassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationSubclassViewController.swift; sourceTree = "<group>"; };
 		87EBF3071FACC1BB00DDA9EB /* OQEOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQEOperation.swift; sourceTree = "<group>"; };
 		FA43CF161FB8E75400298D41 /* LoggableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggableViewController.swift; sourceTree = "<group>"; };
+		FA43CF191FB8EEC500298D41 /* AsyncOperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperationViewController.swift; sourceTree = "<group>"; };
+		FA43CF1B1FB8EF7500298D41 /* TimerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				FA43CF151FB8E72700298D41 /* Utils */,
+				FA43CF181FB8EE9E00298D41 /* AsyncOperationSubclass */,
 				87EBF3041FACAE8A00DDA9EB /* OperationSubclass */,
 				87325BC71FAB780B00F2CF15 /* BlockOperation */,
 				87325BC61FAB77FC00F2CF15 /* AppDelegate */,
@@ -111,6 +116,15 @@
 				FA43CF161FB8E75400298D41 /* LoggableViewController.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FA43CF181FB8EE9E00298D41 /* AsyncOperationSubclass */ = {
+			isa = PBXGroup;
+			children = (
+				FA43CF191FB8EEC500298D41 /* AsyncOperationViewController.swift */,
+				FA43CF1B1FB8EF7500298D41 /* TimerOperation.swift */,
+			);
+			path = AsyncOperationSubclass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87325BC91FAB782500F2CF15 /* BlockOperationViewController.swift in Sources */,
+				FA43CF1A1FB8EEC500298D41 /* AsyncOperationViewController.swift in Sources */,
 				87325BB41FAB758E00F2CF15 /* AppDelegate.swift in Sources */,
+				FA43CF1C1FB8EF7500298D41 /* TimerOperation.swift in Sources */,
 				87EBF3061FACAF5A00DDA9EB /* OperationSubclassViewController.swift in Sources */,
 				FA43CF171FB8E75400298D41 /* LoggableViewController.swift in Sources */,
 				87EBF3081FACC1BB00DDA9EB /* OQEOperation.swift in Sources */,
