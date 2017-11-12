@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OperationSubclassViewController: UIViewController {
+class OperationSubclassViewController: LoggableViewController {
     
     private let queue = OperationQueue()
     
@@ -17,8 +17,10 @@ class OperationSubclassViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         queue.qualityOfService = .default
-        
-        startOperations()
+		
+		DispatchQueue.global().async { [weak self] in
+			self?.startOperationsWithNoWait()
+		}
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,24 +28,25 @@ class OperationSubclassViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func startOperations() {
-        let firstOP = OQEOperation(1_000_000)
-        firstOP.completionBlock = {
-            print("firstOP finished, res: \(firstOP.result)")
-        }
-        
-        let secondOP = OQEOperation(10_000_000)
-        secondOP.completionBlock = {
-            print("secondOP finished, res: \(secondOP.result)")
-        }
+    func startOperationsWithNoWait() {
+		var operations: [Operation] = []
+		let values: [Int] = [
+			1_000_000,
+			10_000_000,
+			100_000_000,
+			100_000_000
+		]
+		
+		for value in values {
+			let operation = OQEOperation(value)
+			operation.completionBlock = { [weak self] in
+				self?.log("operation for value \(value) finished, res: \(operation.result)")
+			}
+			operations.append(operation)
+		}
 
-        let thirdOP = OQEOperation(100_000_000)
-        thirdOP.completionBlock = {
-            print("thirdOP finished, res: \(thirdOP.result)")
-        }
-        
-        queue.addOperation(firstOP)
-        queue.addOperation(secondOP)
-        queue.addOperation(thirdOP)
+		queue.addOperations(operations, waitUntilFinished: true)
+		
+		log("All calcul operations finished !", type: .good)
     }
 }
