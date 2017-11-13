@@ -16,7 +16,8 @@ class TimerOperation: Operation {
 		case ready
 		case canceled
 		case finished
-		
+		case executing
+
 		func keyPath() -> String {
 			return "is\(self.rawValue.capitalized)"
 		}
@@ -35,7 +36,13 @@ class TimerOperation: Operation {
 	
 	override var isFinished: Bool { return state == .finished }
 	override var isCancelled: Bool { return state == .canceled }
-	override var isReady: Bool { return state == .ready }
+	override var isExecuting: Bool { return state == .executing }
+
+	override var isReady: Bool {
+		let dependenciesFinished = dependencies.reduce(true) { return $0 && $1.isFinished }
+		
+		return state == .ready && dependenciesFinished
+	}
 
 	required init(withDelay delay: TimeInterval) {
 		self.delay = delay
@@ -44,7 +51,8 @@ class TimerOperation: Operation {
 	}
 	
 	override func start() {
-		guard isCancelled == false else {
+		guard isCancelled == false,
+			isFinished == false else {
 			state = .finished
 			return
 		}
@@ -53,6 +61,8 @@ class TimerOperation: Operation {
 			guard let wSelf = self else {
 				return
 			}
+			
+			wSelf.state = .executing
 			
 			wSelf.timer = Timer.scheduledTimer(withTimeInterval: wSelf.delay, repeats: false, block: { [weak self] (timer) in
 				timer.invalidate()
